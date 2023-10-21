@@ -27,5 +27,4 @@ def inverseMatrix(ma):
     AlgMatrix=algmat(ma)
     AlgMatrix=transp(AlgMatrix)
     return [[(1/detMa)*b for b in a] for a in AlgMatrix]
-print(inverseMatrix([[1,1,4],[3,0,2],[3,0,0]]))
 
