@@ -7,5 +7,3 @@ def algmat(ma):
         for j in range(len(g[i])):
             g[i][j] = AlgCompl(ma,i,j)
     return g
-
-outp(algmat(input()))
