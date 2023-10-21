@@ -7,9 +7,9 @@ def DeleteRowAndColumn(ma,m, n):
 def determinant(ma):
     if len(ma) == 1 : return ma[0][0]
     k =0
-    for i in range(len(ma)):
-        k+=ma[i][0]*AlgCompl(ma,i,0)
+    for i in range(1,len(ma)+1):
+        k+=ma[i-1][0]*AlgCompl(ma,i,1)
     return k
 
 def AlgCompl(ma,m,n):
-    return ((-1)**(m+n))*determinant(DeleteRowAndColumn(ma,m+1,n+1))
+    return ((-1)**(m+n))*determinant(DeleteRowAndColumn(ma,m,n))
