@@ -1,6 +1,6 @@
 def inp():
-    n, m = int(input()), int(input())
-    matrix = [[int(input()) for j in range(m)] for i in range(n)]
+    n = int(input())
+    matrix = [list(input().split()) for i in range(n)]
     return matrix
 
 def outp(m):
