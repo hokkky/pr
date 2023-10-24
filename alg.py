@@ -28,12 +28,16 @@ def algmat(ma):
     return g
 
 def inverseMatrix(ma):
-    detMa = determinant(ma)
-    if detMa == 0:
-        print("Матрица вырожденная - найти обратную невозможно!")
-        return '?'
+    if len(ma)!=len(ma[0]):
+        print("Матрица не является квадратной - найти обратную невозможно!")
+        return '!'
     else:
-        AlgMatrix=algmat(ma)
-        AlgMatrix=transp(AlgMatrix)
-        return [[round((1/detMa),2)*b for b in a] for a in AlgMatrix]
+        detMa = determinant(ma)
+        if detMa == 0:
+            print("Матрица вырожденная - найти обратную невозможно!")
+            return '?'
+        else:
+            AlgMatrix=algmat(ma)
+            AlgMatrix=transp(AlgMatrix)
+            return [[round((1/detMa),2)*b for b in a] for a in AlgMatrix]
 
