@@ -61,6 +61,6 @@ def main():
         outp(mult(m1, m2))
 
 main()
-    
+input() 
         
     
