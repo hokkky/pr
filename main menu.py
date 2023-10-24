@@ -32,8 +32,10 @@ def main():
     elif (oper == 'rang'): print(rank(m1))
     elif (oper == 'alg'): outp(algmat(m1))
     elif (oper == '**'):
-        if extent(m1) == 0: return 0
-        outp(extent(m1))
+        print("Введите натуральное число (степень)")
+        x = int(input())
+        if extent(m1, x) == 0: return 0
+        outp(extent(m1, x))
     elif (oper == '-1'):
         if inverseMatrix(m1) == '?': return 0
         outp(inverseMatrix(m1))
