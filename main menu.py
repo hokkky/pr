@@ -30,7 +30,9 @@ def main():
         if determinant(m1) == '!': return 0
         print(determinant(m1))
     elif (oper == 'rang'): print(rank(m1))
-    elif (oper == 'alg'): outp(algmat(m1))
+    elif (oper == 'alg'):
+        if algmat(m1) == 0: return 0
+        outp(algmat(m1))
     elif (oper == '**'):
         print("Введите натуральное число (степень)")
         x = int(input())
