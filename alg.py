@@ -30,7 +30,7 @@ def algmat(ma):
 def inverseMatrix(ma):
     if len(ma)!=len(ma[0]):
         print("Матрица не является квадратной - найти обратную невозможно!")
-        return '!'
+        return '?'
     else:
         detMa = determinant(ma)
         if detMa == 0:
