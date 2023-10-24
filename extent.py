@@ -1,7 +1,5 @@
 from multP import mult_p
-def extent(m):
-    print("Введите натуральное число (степень)")
-    x = int(input())
+def extent(m, x):
     if x<=0 or len(m)!=len(m[0]):
         print ("Возведение в степень невозможно!")
         return 0
