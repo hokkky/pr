@@ -21,11 +21,15 @@ def AlgCompl(ma,m,n):
     return ((-1)**(m+n))*determinant(DeleteRowAndColumn(ma,m,n))
 
 def algmat(ma):
-    g = [[[] for i in range(len(ma))] for i in range(len(ma))]
-    for i in range(len(g)):
-        for j in range(len(g[i])):
-            g[i][j] = AlgCompl(ma,i + 1,j + 1)
-    return g
+    if len(ma)!=len(ma[0]):
+        print("Матрица не является квадратной. Алгебраические дополнения вычислить невозможно!")
+        return 0
+    else:
+        g = [[[] for i in range(len(ma))] for i in range(len(ma))]
+        for i in range(len(g)):
+            for j in range(len(g[i])):
+                g[i][j] = AlgCompl(ma,i + 1,j + 1)
+        return g
 
 def inverseMatrix(ma):
     if len(ma)!=len(ma[0]):
